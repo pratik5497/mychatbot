@@ -3,12 +3,11 @@ import React from "react";
 import "./../../CSS/BotOptionsList.css";
 
 
-const BotOptionsList = (props) => {
+const StolenCreditCardOptions = (props) => {
   const linkMarkup = props.options.map((link) => (
     <li key={link.id} className="link-list-item">
       <button
-        onClick={props.actionProvider.ShowCardsList}
-        target="_blank"
+        onClick={()=>{}}
         rel="noopener noreferrer"
         className="link-list-item-url"
       >
@@ -20,4 +19,4 @@ const BotOptionsList = (props) => {
   return <ul className="link-list">{linkMarkup}</ul>;
 };
 
-export default BotOptionsList;
+export default StolenCreditCardOptions;

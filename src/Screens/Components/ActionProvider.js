@@ -14,6 +14,26 @@ class ActionProvider {
   
     this.updateChatbotState(message);
   };
+  ShowCardsList = () => {
+    const message = this.createChatBotMessage(
+      "Select Your Card:",
+      {
+        widget: "CardsList",
+      }
+    );
+  
+    this.updateChatbotState(message);
+  };
+  ShowStolenCardOptions = () => {
+    const message = this.createChatBotMessage(
+      "Select action:",
+      {
+        widget: "StolenCardOptionsList",
+      }
+    );
+  
+    this.updateChatbotState(message);
+  };
   greet() {
     const greetingMessage = this.createChatBotMessage("Hi, friend.")
     this.updateChatbotState(greetingMessage)

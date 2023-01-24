@@ -1,6 +1,7 @@
 import { createChatBotMessage } from 'react-chatbot-kit';
 import BotOptions from './BotOptions';
 import BotOptionsList from './BotOptionsList';
+import CreditCardList from './CreditCardList';
 const ListOptions = [
   {
     text: "Credit Card Limit",
@@ -35,6 +36,20 @@ const ListOptions = [
       "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem",
   },
 ];
+const StolenCardsOptions = [
+  {
+    text: "Block and re-issue",
+    id: 1,
+    Description:
+      "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem",
+  },
+  {
+    text: "Track the transactions",
+    id: 2,
+    Description:
+      "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem",
+  },
+]
 const config = { 
   botName: "NuanceBot",
   initialMessages: [
@@ -60,6 +75,10 @@ const config = {
       widgetName: "BotOptionsList",
       widgetFunc: (props) => <BotOptionsList {...props} />,
       props:{options:ListOptions}
+    },
+    {
+      widgetName: "CardsList",
+     widgetFunc: (props) => <CreditCardList {...props} />,
     },
     ,]   
   }
